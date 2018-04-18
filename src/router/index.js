@@ -20,7 +20,8 @@ export default new Router({
       path: '/',
       name: 'ViewPolls',
       component: ViewPolls,
-    },
+  
+   },
 
   ]
 })

@@ -35,14 +35,20 @@ export default {
   	this.$store.dispatch('getPolls');
   },
   methods: {
-  	addYes: function(){
+  	addYes: function(poll){
   		this.$store.dispatch('addYes',{
-  			//start here tomorrow
+  			pollID:poll.id,
+  			total: poll.total_responses,
+  			agree: poll.number_agree,
   		});
+  		console.log("Poll id: " + poll.id);
 
   	},
-  	addNo: function(){
-
+  	addNo: function(poll){
+  		this.$store.dispatch('addNo',{
+  			pollID:poll.id,
+  			total: poll.total_responses,
+  		});
   	},
   },
 }
