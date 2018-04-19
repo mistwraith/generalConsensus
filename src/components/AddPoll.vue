@@ -6,11 +6,15 @@
         <input id="input" type="text" size="50" v-model="pollText">
         <button id="submitButton" type="submit">Submit</button>
       </form>
+      <div>
+        <view-polls/>
+      </div>
 
   </div>
 </template>
 
 <script>
+import ViewPolls from './ViewPolls.vue';
 export default {
   name: 'AddPoll',
   data () {
@@ -19,7 +23,7 @@ export default {
     }
 
   },
-
+  components: {ViewPolls},
   methods: {
     addPoll:function(){
       this.$store.dispatch('addPoll',{
@@ -27,7 +31,7 @@ export default {
       }).then(addPoll => {
       this.pollText = "";
       });
-
+      location.reload();
 
 
 

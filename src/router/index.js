@@ -9,19 +9,19 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
-/*
+
     {
       path: '/',
       name: 'AddPoll',
       component: AddPoll,
     },
-*/
+/*
     {    	
       path: '/',
       name: 'ViewPolls',
       component: ViewPolls,
   
    },
-
+*/
   ]
 })

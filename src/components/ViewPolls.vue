@@ -25,6 +25,9 @@ export default {
       pollText:'',
     }
   },
+  watch:{
+  	//$store.pollsToShow;
+  },
     computed:{
     pollsToShow: function(){
   		console.log(this.$store.getters.pollsToShow);
@@ -42,6 +45,7 @@ export default {
   			agree: poll.number_agree,
   		});
   		console.log("Poll id: " + poll.id);
+  		location.reload();
 
   	},
   	addNo: function(poll){
@@ -49,6 +53,7 @@ export default {
   			pollID:poll.id,
   			total: poll.total_responses,
   		});
+  		location.reload();
   	},
   },
 }

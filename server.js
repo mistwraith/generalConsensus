@@ -30,7 +30,7 @@ app.post('/api/addPoll', (req,res) => {
 });
 
 app.get('/api/getPolls',(req,res) =>{
-	knex('polls').orderBy('timestamp','desc')
+	knex('polls').orderBy('timestamp','asc')
 	.select('id','text','total_responses','number_agree')
 	.then(polls => {res.status(200).json({polls:polls});});	//how does this var work?
 	//console.log(polls);
